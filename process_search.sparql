@@ -15,6 +15,6 @@ WHERE {
        ; gvp:broaderGeneric/gvp:broaderGeneric? <http://vocab.getty.edu/aat/300053003>
        ; xl:prefLabel [  
          dcterms:language <http://vocab.getty.edu/aat/300388277>
-                          ; gvp:term ?__name
+                          ; gvp:term ?_name_en
        ]
 }
