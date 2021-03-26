@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX gvp: <http://vocab.getty.edu/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xl: <http://www.w3.org/2008/05/skos-xl#>
+SELECT DISTINCT ?x ?l
+WHERE {
+  ?x a gvp:Concept 
+       ; gvp:broaderGeneric <http://vocab.getty.edu/aat/300053003>
+       ; xl:prefLabel [  
+         dcterms:language <http://vocab.getty.edu/aat/300388277>
+                          ; gvp:term ?l
+       ]
+}
