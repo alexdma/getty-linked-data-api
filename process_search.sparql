@@ -1,5 +1,6 @@
 #+ summary: Searches for a process with a particular name
 #+ endpoint: http://vocab.getty.edu/sparql
+#+ method: GET
 #+ tags:
 #+   - process
 
@@ -16,4 +17,4 @@ WHERE {
          dcterms:language <http://vocab.getty.edu/aat/300388277>
                           ; gvp:term ?__name
        ]
-} ORDER BY ?__name
+}
