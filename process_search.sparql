@@ -1,5 +1,6 @@
 #+ summary: Searches for a process with a particular name
 #+ endpoint: http://vocab.getty.edu/sparql
+#+ mime: application/sparql-results+json
 #+ method: GET
 #+ tags:
 #+   - process
