@@ -10,7 +10,7 @@ SELECT DISTINCT ?x ?l
 FROM <http://vocab.getty.edu/dataset/aat>
 WHERE {
   ?x a gvp:Concept 
-       ; gvp:broaderGeneric(2) <http://vocab.getty.edu/aat/300053003>
+       ; gvp:broaderGeneric/gvp:broaderGeneric? <http://vocab.getty.edu/aat/300053003>
        ; xl:prefLabel [  
          dcterms:language <http://vocab.getty.edu/aat/300388277>
                           ; gvp:term ?l
