@@ -1,0 +1,21 @@
+#+ summary: Searches for a process with a particular name
+#+ endpoint: http://vocab.getty.edu/sparql
+#+ method: GET
+#+ pagination: 50
+#+ tags:
+#+   - process
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX gvp: <http://vocab.getty.edu/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xl: <http://www.w3.org/2008/05/skos-xl#>
+SELECT DISTINCT ?process
+FROM <http://vocab.getty.edu/dataset/aat>
+WHERE {
+  ?process a gvp:Concept 
+       ; gvp:broaderGeneric/gvp:broaderGeneric? <http://vocab.getty.edu/aat/300053003>
+       ; xl:prefLabel [  
+         dcterms:language <http://vocab.getty.edu/aat/300388277>
+                          ; gvp:term ?__name
+       ]
+} ORDER BY ?__name
